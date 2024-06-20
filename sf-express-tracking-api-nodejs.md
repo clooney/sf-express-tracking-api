@@ -1,12 +1,12 @@
-Australia Post Tracking API - Node.js
+SF Express Tracking API - Node.js
 ================================
-Use Node.js to track Australia Post shipments with Australia Post Tracking API.
+Use Node.js to track SF Express shipments with SF Express Tracking API.
 
 Features
 --------
-- Real-time Australia Post tracking.
-- Batch Australia Post tracking.
-- Other features to manage your Australia Post tracking.
+- Real-time SF Express tracking.
+- Batch SF Express tracking.
+- Other features to manage your SF Express tracking.
 
 Installation
 ------------
@@ -31,7 +31,7 @@ To use this API, you need to generate your API key.
 - Give a name to your API key, and click "Save" .
 
 
-Then, start to track your Australia Post shipments.
+Then, start to track your SF Express shipments.
 
 Usage
 ----------
@@ -44,7 +44,7 @@ Create a tracking (Real-time tracking):
       
       const params = {
         'tracking_number': '0301006785462006320995',
-        'courier_code': 'australia-post',
+        'courier_code': 'sf-express',
         'order_number': '',
         'customer_name': '',
         'title': '',
@@ -64,10 +64,10 @@ Create trackings (Max. 40 tracking numbers create in one call):
     
     const params = [{
         'tracking_number': 'LK201223662AU',
-        'courier_code':'australia-post'
+        'courier_code':'sf-express'
     },{
       'tracking_number': 'LH290032509AU',
-      'courier_code':'australia-post'
+      'courier_code':'sf-express'
     }]
     trackingmore.trackings.batchCreateTrackings(params)
       .then(result => console.log(result))
@@ -84,10 +84,10 @@ Get status of the shipment:
     # Perform queries based on various conditions
     const params = [{
         'tracking_number': 'LH290032509AU',
-        'courier_code':'australia-post'
+        'courier_code':'sf-express'
     },{
       'tracking_number': 'LK201223662AU',
-      'courier_code':'australia-post'
+      'courier_code':'sf-express'
     }]
     trackingmore.trackings.batchCreateTrackings(params)
       .then(result => console.log(result))
